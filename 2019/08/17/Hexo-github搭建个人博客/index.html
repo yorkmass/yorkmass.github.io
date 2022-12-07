@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          Hexo+github搭建个人博客 - null
+        
+    </title>
+
+    <link rel="canonical" href="https://yorkmass.github.io/2019/08/17/Hexo-github搭建个人博客/">
+
+    <!-- Bootstrap Core CSS -->
+
+   <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+
+    
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+	<link rel="stylesheet" href="/css/w3.css">
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+    }
+   .post-heading{
+    padding:20px;
+    }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+
+</style>
+
+<header id="headerid" class="w3-indigo intro-header" style="position:relative;">
+    <!-- Signature -->
+	
+        <div class="container">
+            <div class=" row" >
+			
+			<canvas id="particles-js-canvas" style="position:absolute;z-index:1;top:0px;left:0px;" width="100%" height="50%"></canvas>
+			
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="z-index:2;">
+                
+                    <div class="post-heading" style="padding:40px">
+                        <div class="tags">
+                            
+                        </div>
+                        <h1>Hexo+github搭建个人博客</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by Yaoyi on
+                            2019-08-17
+                        </span>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+  
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">yorkmass</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a  href="/">Homepage</a>
+                    </li>
+		    
+                    
+
+                        
+                        <li>
+           
+                            <a  href="https://blog.csdn.net/qq_36949176">csdn</a>
+                           
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+           
+                            <a  href="https://www.cnblogs.com/yorkmass/">博客园</a>
+                           
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h4 id="使用hexo在github上面搭建个人博客"><a href="#使用hexo在github上面搭建个人博客" class="headerlink" title="使用hexo在github上面搭建个人博客"></a>使用hexo在github上面搭建个人博客</h4><hr>
+<p><a href="https://blog.csdn.net/qq_36949176/article/details/99684455" target="_blank" rel="noopener">可参考CSDN教程</a><br>我们需要在电脑上安装git和npm<br><br>Linux系统最为方便，直接装git和npm就好了<br><br>Windows系统安装git和npm，然后所有命令都在git bash里面操作<br><br>npm安装hexo，全局安装<br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g n</span><br></pre></td></tr></table></figure>
+
+<p>然后找一个文件夹，初始化hexo，括号里面为说明，一步一步执行<br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog(生成的博客文件夹的名字，自定义,会在对应执行该语句的路径生成对应的文件)</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>执行完所有命令就可以在本地通过<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>访问hexo了<br><br>为了方便写博客，我们还需要在本地安装hexo-admin,括号里面解释说明<br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-admin</span><br><span class="line">hexo server -d(开启hexo操作)</span><br></pre></td></tr></table></figure>
+
+<p>安装完成之后，可以通过<a href="http://localhost:4000/admin" target="_blank" rel="noopener">http://localhost:4000/admin</a>访问<br><br>使用<a href="https://travis-ci.com" target="_blank" rel="noopener">https://travis-ci.com</a>执行部署github<br><br>在这之前，我们首先需要在github里面新建一个空仓库，仓库名：用户名.github.io<br><br>如：yorkmass.github.io    我的仓库链接：<a href="https://github.com/yorkmass/yorkmass.github.io" target="_blank" rel="noopener">yorkmass.github.io</a><br><br>用于接收hexo生成的静态文件，展示给用户<br><br>我们还需要另外给刚才在本机执行的hexo文件新建一个仓库，我的叫myblogs。我的仓库链接：<a href="https://github.com/yorkmass/myblogs" target="_blank" rel="noopener">myblogs</a><br><br>接着就是把刚才在本机生成的目录push到你新建的github仓库(myblogs仓库)中<br><br>因为需要连接到travis-ci，他要识别仓库里面的.travis.yml 文件，我们需要在本地的hexo项目的根目录新建一个.travis.yml文件<br><br>在里面添加如下内容<br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - &quot;11&quot;</span><br><span class="line">install:</span><br><span class="line">  - npm install</span><br><span class="line">script:</span><br><span class="line">  - hexo g</span><br><span class="line">after_script:</span><br><span class="line">  - cd ./public</span><br><span class="line">  - git init</span><br><span class="line">  - git config user.name &quot;yorkmass&quot;</span><br><span class="line">  - git config user.email &quot;1458510486@qq.com&quot;</span><br><span class="line">  - git add -A</span><br><span class="line">  - git commit -m &quot;init&quot;</span><br><span class="line">  - git push --force &quot;https://$&#123;TOKEN&#125;@github.com/yorkmass/yorkmass.github.io.git&quot; &quot;master:master&quot;</span><br><span class="line">branches:</span><br><span class="line">  only:</span><br><span class="line">    - master</span><br></pre></td></tr></table></figure>
+
+<p>其中，我们需要修改里面的user.name，把yorkmass改成你github的用户名，我的用户名为yorkmass<br><br>把user.email改为你github绑定的邮箱，然后把https://${TOKEN}@github.com/yorkmass/yorkmass.github.io.git<br><br>这段东西按着这个格式改为你新建的&nbsp;&nbsp;&nbsp;&nbsp;github用户名.github.io仓库的地址&nbsp;&nbsp;<br><br>如果你的用户名为imoonfish,就改成<br><br>https://${TOKEN}@github.com/imoonfish/imoonfish.github.io.git<br><br>其他不变，这样就把myblogs仓库执行完成的文件发布到yorkmass.github.io仓库里面了。<br><br>我们还需要连接github和travis-ci.com<br><br>我们登陆我们的github,进入setting页面，然后点击最下面的那个开发者设置Developer setting，然后点击Personal access tokens<br><br><br><img src="/img/small/p021.png" alt="github01" title="github"><br><img src="/img/small/p022.png" alt="github02" title="github"><br><img src="/img/small/p023.png" alt="github03" title="github"><br>Generate new token，然后添加note（随便写），把能勾选的都勾选，然后会生成一个key，注意：这个key只出现一次，先复制下来到记事本保存一下，等会要用<br><br>接着我们使用github账户登陆<a href="https://travis-ci.com/" target="_blank" rel="noopener">travis-ci.com</a>，他会同步你在github的所有仓库，我们打开我们新建的仓库(myblogs仓库），找到这个项目的设置，如图是设置完成的图片。<br><br><img src="/img/small/p024.png" alt="github04" title="github"><br>如上图所示，我们需要在Environment Variable环境变量里面添加一行<br><br>Name写TOKEN，VALUE写刚才在github生成的key，粘贴进去即。BRANCH填写master即可，然后点击右边的Add按钮<br><br>还有下面的一条Cron Jobs，这个我们就随便配置了，一般是每天更新，BRANCH写master，INTERVAL写Runs daily，然后OPTIONS填Always run，然后点击右边的Add按钮即可。<br><br>然后我们切换到Current栏，点击Start，开始执行代码，执行成功之后如图所示<br><br><img src="/img/small/p025.png" alt="github05" title="github"><br>执行完成之后，它会在你的yorkmass.github.io仓库发布一系列hexo的静态页面， 然后我们通过github用户名.github.io就可以进行访问了，如：<a href="https://yorkmass.github.io">https://yorkmass.github.io</a></p>
+
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2019/08/17/Halo博客系统在IDEA运行时log报错/" data-toggle="tooltip" data-placement="top" title="Halo博客系统在IDEA运行时log报错">&larr; Previous post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2019/08/16/git常见错误：push出现rejected错误/" data-toggle="tooltip" data-placement="top" title="git常见错误：push出现rejected错误">Next post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+
+                
+				
+            </div>
+
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">Tags</a></h5>
+                    <div class="tags">
+                       
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://www.cnblogs.com/yorkmass/" target="_blank">博客园</a></li>
+                    
+                        <li><a href="https://blog.csdn.net/qq_36949176" target="_blank">csdn</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/yorkmass">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; yorkmass-Yaoyi 2022 
+                    <br>
+                    Powered by <a href="https://blog.csdn.net/qq_36949176">Yaoyi</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    <a href="https://github.com/yorkmass">github</a> 
+					
+					
+					<i class="fa fa-eye" id="leancounter"></i>
+					
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+
+   <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+
+
+
+<!-- Bootstrap Core JavaScript -->
+
+   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+	<script src="/js/particles.js"></script>
+	<script src="/js/particles_config.js"></script>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://yorkmass.github.io/2019/08/17/Hexo-github搭建个人博客/index.html/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="https://yorkmass.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
